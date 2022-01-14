@@ -1,0 +1,20 @@
+## Terraform:- It's a infrasture tool where you can write complete infrastructure in a file.
+================
+
+Download link:- https://www.terraform.io/downloads
+
+# Extract the zip file. & Copy the complete path
+path:- C:\Users\priyanka\Downloads\terraform_1.1.3_windows_amd64
+
+# Open CMD & go to the above location
+cd C:\Users\priyanka\Downloads\terraform_1.1.3_windows_amd64
+terraform.exe --help     ##{options will be shown}
+
+cd ..
+terraform.exe --help     ##{will not work because it's location specific to avoide this follow below steps}
+
+This PC > Properties > Advance System Settings > Environment Variable > Path > New > C:\Users\priyanka\Downloads\terraform_1.1.3_windows_amd64 > ok
+
+# Now open the terminal & run terraform command in any location. It wouln't have been a location specific now.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
