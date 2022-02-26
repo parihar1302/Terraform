@@ -21,3 +21,20 @@ This PC > Properties > Advance System Settings > Environment Variable > Path > N
 # Now open the terminal & run terraform command in any location. It wouln't have been a location specific now.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+## Set-up Terraform for Linux:-
+-------------------------------
+
+Download link:- https://www.terraform.io/downloads
+
+cd Downloads
+
+unzip terraform_1.1.3_windows_amd64 
+
+./terraform --help     ##{this will work only if you are in this location, to run terraform everywhere you need to set the path like we did for windows. follow below steps}
+echo $PATH
+
+sudo cp terraform /usr/local/bin
+
+./terraform --help
