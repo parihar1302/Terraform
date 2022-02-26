@@ -56,7 +56,24 @@ value = "this is my first programme"
 }                  ##Save & Exit
 
 terraform plan
+-----------------------------------------------------------------------------------------------------------------------
 
+
+
+## Writing a JSON file:-      ## Extention would be filename.tf.json
+-------------------------
+
+vi JSONfile.tf.json
+{
+ "output" : {
+    "home" : {
+        "value" : "Jabalpur" 
+    }
+}
+}                         ##Save & Exit
+
+terraform plan
+===================================================================================================================================
 
 
 
