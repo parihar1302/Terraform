@@ -38,3 +38,25 @@ echo $PATH
 sudo cp terraform /usr/local/bin
 
 ./terraform --help
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+##Note:- Terraform file extention would be .tf
+
+
+
+## Creating First Programme in Linux:-      You can use Git bash as well , if working in windows OS
+-----------------------------------------
+
+mkdir myfolder
+
+vi firstprogramme.tf
+output sample {
+value = "this is my first programme"
+}                  ##Save & Exit
+
+terraform plan
+
+
+
+
