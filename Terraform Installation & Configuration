@@ -1,6 +1,9 @@
 ## Terraform:- It's a infrasture tool where you can write complete infrastructure in a file.
 ================
 
+## Setting up Terraform in Windows
+-----------------------------------
+
 Download link:- https://www.terraform.io/downloads
 
 # Extract the zip file. & Copy the complete path
