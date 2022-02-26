@@ -1,0 +1,14 @@
+## Terraform Interview Question & Answeres
+==============================================
+
+Q.) Terraform :- It's a infrastructure tool where you can create a template & based on that, infrastrucure gets created.
+                 It is compatible with AWS, Azure, GCP & VMware.
+ 
+ 
+Q.) Can Ansible create infrastucure?
+A.) Ansible is a configuration management tool but it can also create whole infrasturcure with complex playbook which is difficult to manage.
+
+Q.) Cloudformation VS Terraform ?
+A.) Cloudformation is also an Infrastecure as code(IAAS) but drawback is , it's compatible only in AWS. This can not deal with anyother cloud plteform. Where Terraform has an ability to work in any cloudplatform.
+    Also, you can not create a keypair & have to mention hard-coded in cloudformation where Terraform can create that.
+
