@@ -1,0 +1,86 @@
+Terraform launches EC2 instance              https://kumargaurav1247.medium.com/introduction-to-terraform-ec2-instance-creation-using-terraform-ec221ec630d7
+===================================          https://www.middlewareinventory.com/blog/terraform-aws-example-ec2/
+
+Step-1.) Create an IAM user :-
+
+
+Step-2.) Install aws cli :-
+apt install python3 -y
+apt install pip -y
+pip install awscli
+   OR
+sudo apt-get install AWS cli
+
+
+## Configure AWS CLI :-
+aws configure
+Access key:- <IAM user access key>
+Secret access key:- <IAM user secret access key>
+Region:- us-east-2          ##{can modify as per your requirement}
+
+
+
+Step-3.) Downloads/terraform :-
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+sudo apt-get update && sudo apt-get install terraform
+terraform -v
+     OR	
+curl -O https://releases.hashicorp.com/terraform/0.12.16/terraform_0.12.16_linux_amd64.zip
+unzip terraform_0.12.16_linux_amd64.zip -d /usr/bin/               ##{Unzip the binary to /usr/bin}
+
+
+## NOTE:- to set the path, so that terraform can work in any location (no location specific). If it's installed in download folder than move to any binary location, below steps mention:-
+echo $PATH
+mv ~/Downloads/terraform /usr/local/bin/
+terraform -help
+
+
+## Enable tab completion:-
+touch ~/.bashrc
+terraform -install-autocomplete
+
+
+
+Step-4.) Create providers.tf     ## ## This file contains provider info. Here, provide is aws. Otherwise it could be :- aws, azure, gcp
+vi providers.tf             
+provider "aws" {
+  region = "us-east-2"
+}
+
+
+
+Step-5.) Create main.tf also called as Configuration file.     ## A file which consists of a template to provision the resources in the cloud.
+vi  main.tf
+resource "aws_instance" "terraforminstance" {
+  ami  = "ami-0fb653ca2d3203ac1"
+  instance_type = "t2.micro"
+  tags = {
+    Name = "terraformserver"
+  }
+}
+
+## NOTE:- Now we will go to terminal, go to that path where you created main.tf and run the terraform init command
+
+
+Step-6.) terraform init         ##{it scans the provider & download the dependancy or code for provider. In this senerio, we have taken aws as provider. It's idempotent}
+ls -larth               ##{provider code would be downloaded into .terraform folder}
+
+
+Step-7.) terraform plan          ##{It runs a sanity check. Shows you what exactly terraform going to make changes}
++ = add,   - = remove, ~ = modified
+
+
+Step-8.) terraform apply         ##{Create/Provision the changes}
+
+
+Step-9.) you can verify from EC2, wheather instance is created or not
+
+
+Step-10.) terraform output         ##{display the output}
+
+
+
+Step-10.) terraform destroy           ##{delete your all resources, which you had created}  
+
+===================================================================================================================================
