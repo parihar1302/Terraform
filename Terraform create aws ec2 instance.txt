@@ -87,3 +87,34 @@ Step-10.) terraform destroy           ##{delete your all resources, which you ha
           terraform destroy --auto-approve          ##{Deleting without asking "yes"}
 
 ===================================================================================================================================
+
+## Added S3 Bucket resource in main.tf
+---------------------------------------
+
+vi main
+variable "s3_bucket_names" {
+  type = list
+  default = ["dev-bucket.app", "uat-bucket.app", "prod-bucket.app"]
+}
+
+resource "aws_s3_bucket" "rugged_buckets" {
+  count         = length(var.s3_bucket_names) //count will be 3
+  bucket        = var.s3_bucket_names[count.index]
+  acl           = "private"
+  region        = "us-east-2"
+  force_destroy = true
+}
+
+
+
+## Adding Variable file
+------------------------
+
+vi variables.tf
+variable "s3_bucket_names" {
+  type = list
+  default = ["bucket1.app", 
+             "bucket2.app", 
+             "bucket3.app" 
+            ]
+}
