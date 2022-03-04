@@ -30,7 +30,7 @@ curl -O https://releases.hashicorp.com/terraform/0.12.16/terraform_0.12.16_linux
 unzip terraform_0.12.16_linux_amd64.zip -d /usr/bin/               ##{Unzip the binary to /usr/bin}
 
 
-## NOTE:- to set the path, so that terraform can work in any location (no location specific). If it's installed in download folder than move to any binary location, below steps mention:-
+## NOTE:-Optional step --> to set the path, so that terraform can work in any location (no location specific). If it's installed in download folder than move to any binary location, below steps mention:-
 echo $PATH
 mv ~/Downloads/terraform /usr/local/bin/
 terraform -help
