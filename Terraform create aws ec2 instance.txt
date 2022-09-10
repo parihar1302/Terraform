@@ -71,12 +71,16 @@ ls -larth               ##{provider code would be downloaded into .terraform fol
 
 Step-7.) terraform plan          ##{It runs a sanity check. Shows you what exactly terraform going to make changes}
 + = add,   - = remove, ~ = modified
+           OR
+	 terraform plan -out tfplan        ##{-out tfplan will save the output. and you can discuss within your team & take the GO-NO-GO call}
 
 
 Step-8.) terraform apply         ##{Create/Provision the changes}
             OR
          terraform apply --auto-approve        ##{provitioning without asking "yes"}
-
+            OR
+	 terraform apply "tfplan"             ##{using tfplan, To perform exactly same actions as terraform plan -out tfplan}
+	 
 
 Step-9.) you can verify from EC2, wheather instance is created or not
 
