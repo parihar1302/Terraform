@@ -39,6 +39,10 @@ sudo cp terraform /usr/local/bin
 
 ./terraform --help
 
+# enabling auto tab  completion
+touch ~/.bashrc
+
+terraform -install-autocomplete          ##{installing autocomplete}
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ##Note:- Terraform file extention would be .tf
