@@ -28,9 +28,9 @@ This PC > Properties > Advance System Settings > Environment Variable > Path > N
 
 Download link:- https://www.terraform.io/downloads
 
-cd Downloads
+curl -O https://releases.hashicorp.com/terraform/1.2.9/terraform_1.2.9_linux_amd64.zip          ##{Downloading Terraform package from official website}
 
-unzip terraform_1.2.9_linux_amd64 
+unzip terraform_1.2.9_linux_amd64 -d /usr/bin/                ##{Unzip the binary to /usr/bin}
 
 ./terraform --help     ##{this will work only if you are in this location, to run terraform everywhere you need to set the path like we did for windows. follow below steps}
 echo $PATH
