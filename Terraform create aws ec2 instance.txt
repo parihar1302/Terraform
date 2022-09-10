@@ -18,6 +18,8 @@ Access key:- <IAM user access key>
 Secret access key:- <IAM user secret access key>
 Region:- us-east-2          ##{can modify as per your requirement}
 
+# aws --version       ##{verifing the aws-cli version}
+
 
 
 Step-3.) Downloads/terraform :-
