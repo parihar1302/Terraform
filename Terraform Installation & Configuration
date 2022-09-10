@@ -30,7 +30,7 @@ Download link:- https://www.terraform.io/downloads
 
 cd Downloads
 
-unzip terraform_1.1.3_windows_amd64 
+unzip terraform_1.2.9_linux_amd64 
 
 ./terraform --help     ##{this will work only if you are in this location, to run terraform everywhere you need to set the path like we did for windows. follow below steps}
 echo $PATH
