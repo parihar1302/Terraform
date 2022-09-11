@@ -82,7 +82,7 @@ Step-8.) terraform apply         ##{Create/Provision the changes}
 	 terraform apply "tfplan"             ##{using tfplan, To perform exactly same actions as terraform plan -out tfplan}
 	 
 
-Step-9.) you can verify from EC2, wheather instance is created or not
+Step-9.) now you can verify from EC2 console, wheather instance is created or not
 
 
 Step-10.) terraform output         ##{display the output}
