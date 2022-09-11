@@ -1,5 +1,6 @@
 Terraform launches EC2 instance              https://kumargaurav1247.medium.com/introduction-to-terraform-ec2-instance-creation-using-terraform-ec221ec630d7
 ===================================          https://www.middlewareinventory.com/blog/terraform-aws-example-ec2/
+                                             https://jhooq.com/terraform-input-variables/      :- Terraform variable
 
 Step-1.) Create an IAM user :-
 
@@ -213,7 +214,7 @@ Now you can connect the instance with Pem file.
 
 ================================================================================================================================================
 
-
+### Terraform Variable:- https://jhooq.com/terraform-input-variables/ 
 
 
 ## Added S3 Bucket resource in main.tf
