@@ -21,13 +21,13 @@ A.) yes, you can run perticular module on specific resource or host/server/ec2. 
 
 Senerio-a.)
 1.) Single module on sigle host using -target=resource :-                  
-terraform apply -target=module.module-1.aws_instance.my_ec2_instance       ## module :- it's a prifix/parameter, if you're using any module
-                                                                        ## module-1 :- it is name of the module which you want to use.
-2.) Running speciific resource or ec2/server/ host without module:-                    ## aws_instance - This is the instance type that I am targetting to run or apply
-terraform apply -target=aws_instance.my_ec2_instance 
+terraform apply -target=module.module-1.aws_instance.my_ec2_instance                   ## module :- it's a prifix/parameter, if you're using any module
+                                                                                       ## module-1 :- it is name of the module which you're using.
+2.) Running speciific resource or ec2/server/ host without module:-                    ## aws_instance :- This is the instance type(resource) that I am targetting to run or apply
+terraform apply -target=aws_instance.my_ec2_instance                                   ## my_ec2_instance:- It is the name of my host/server/instance on which I am targetting to run or apply
 
 Senerio-b.)
-1.) Multiple modules on Multiple resource or ec2/server/host
+1.) specifing Multiple modules on specific Multiple resources or ec2/server/host
 terraform apply -target=module.module-1.aws_instance.my_ec2_instance_1 -target=module.module-2.aws_instance.my_ec2_instance_2 
 
 
