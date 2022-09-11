@@ -12,3 +12,29 @@ Q.) Cloudformation VS Terraform ?
 A.) Cloudformation is also an Infrastecure as code(IAAS) but drawback is , it's compatible only in AWS. This can not deal with anyother cloud plteform. Where Terraform has an ability to work in any cloudplatform.
     Also, you can not create a keypair & have to mention hard-coded in cloudformation where Terraform can create that.
 
+Q.) what is Terraform Resource ?
+A.) Resource is like a service which you can use for provisioning.
+    Ex:- aws_instance, s3, rds, vpc
+
+Q.) Can i run specific module on specific resource or ec2/host/server, instead off running all module in all server?
+A.) yes, you can run perticular module on specific resource or host/server/ec2.    ---> https://jhooq.com/terraform-run-specific-resource/
+
+Senerio-a.)
+1.) Single module on sigle host using -target=resource :-                  
+terraform apply -target=module.module-1.aws_instance.my_ec2_instance       ## module :- it's a prifix/parameter, if you're using any module
+                                                                        ## module-1 :- it is name of the module which you want to use.
+2.) Running speciific resource or ec2/server/ host without module:-                    ## aws_instance - This is the instance type that I am targetting to run or apply
+terraform apply -target=aws_instance.my_ec2_instance 
+
+Senerio-b.)
+1.) Multiple modules on Multiple resource or ec2/server/host
+terraform apply -target=module.module-1.aws_instance.my_ec2_instance_1 -target=module.module-2.aws_instance.my_ec2_instance_2 
+
+
+
+
+
+
+
+
+
