@@ -211,6 +211,8 @@ Create key pair >> Name :- aws_key
 Create key pairs                  ##{key will download on local system}
 
 Now you can connect the instance with Pem file.
+     OR
+you can copy the content of generated aws_key & replace with downloaded aws_key.pem file & than login from github, etc
 
 ======THE END=======================================================================================================================================
 
