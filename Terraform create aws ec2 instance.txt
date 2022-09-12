@@ -216,7 +216,7 @@ Now you can connect the instance with Pem file.
 
 
 
-## Terraform Output value:- it is usefule for storring the output values & debugging the terraform code.
+### Terraform Output value:- it is usefule for storring the output values & debugging the terraform code.
 -------------------------------------------------------------------------------------------------------------
 syntex:-
 output "my_console_output" {
@@ -226,6 +226,18 @@ output "my_console_output" {
 # Note:- you can mention output value in main.tf as well as seperate file named as output.tf (recommanded).
 # Note:- just remove count parameter while using output since terraform will get confused while server's attributes to show.
 ============================================================================================================================
+
+
+### Sensitive:- to protect/hide/encrypt sensitive info like credentials, url, keys we can use sensitive.
+syntex:-
+output "my_console_output" {
+  value = aws_instance.ec2_example.public_ip
+  sensitive = true               ##{hiding public ip detail}
+}
+
+=======================================================================================================================
+
+
 
 ### Terraform Variable:- https://jhooq.com/terraform-input-variables/ 
 
