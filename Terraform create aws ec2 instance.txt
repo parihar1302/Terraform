@@ -223,7 +223,7 @@ output "my_console_output" {
   value = aws_instance.ec2_example.public_ip
 } 
 
-# Note:- you can mention output value here as well as sepate file named as output.tf (recommanded).
+# Note:- you can mention output value in main.tf as well as seperate file named as output.tf (recommanded).
 # Note:- just remove count parameter while using output since terraform will get confused while server's attributes to show.
 ============================================================================================================================
 
