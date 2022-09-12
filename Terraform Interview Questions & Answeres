@@ -33,8 +33,10 @@ terraform apply -target=module.module-1.aws_instance.my_ec2_instance_1 -target=m
 Q.) What is Terraform Output values & why do we use it ? 
 A.) Terraform output values will be really useful when you want to debug your terraform code. 
     Terraform output values can help you to print the attributes reference(arn, instance_state, outpost_arn, public_ip, public_dns etc) on your console.
-
-
+    syntex:- output "my_console_output" {
+               value = aws_instance.my_ec2_instance.public_ip       ##{aws_instance=resource, my_ec2_instance=server name, public_ip=attribute}
+             }
+##Note:- you can mention output paramter in "main.tf" or create a seperate file "output.tf" (recommanded).
 
 
 
