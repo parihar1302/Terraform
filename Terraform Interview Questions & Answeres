@@ -30,8 +30,8 @@ Senerio-b.)
 1.) specifing Multiple modules on specific Multiple resources or ec2/server/host
 terraform apply -target=module.module-1.aws_instance.my_ec2_instance_1 -target=module.module-2.aws_instance.my_ec2_instance_2 
 
-Q.) What is Terraform Output values & why do we use it ? 
-A.) Terraform output values will be really useful when you want to debug your terraform code. 
+Q.) What is Terraform Output file & why do we use it ? 
+A.) Terraform output stores output values & also useful while debugging your terraform code. 
     Terraform output values can help you to print the attributes reference(arn, instance_state, outpost_arn, public_ip, public_dns etc) on your console.
     syntex:- output "my_console_output" {
                value = aws_instance.my_ec2_instance.public_ip       ##{aws_instance=resource, my_ec2_instance=server name, public_ip=attribute}
