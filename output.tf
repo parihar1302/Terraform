@@ -9,4 +9,15 @@ output "my_console_output" {                                     ## aws_instance
 
 
 # after running terraform apply command , output will be visible on terminal itselft
-  
+ =========================================================================================
+
+
+### Sensitive :- To encrypt/hide sensitive output details which you don't want to expose to everyone.
+
+#Syntex:-   sensitive = true
+output "my_console_output" {                                     ## aws_instance = modules; terraforminstance =  parameter
+  value = aws_instance.terraforminstance.public_ip               ## public_ip := attribute you can modify as per your requirement
+  sensitive = true                                               ## encrypt public_ip details
+}
+
+================================================================================================================
