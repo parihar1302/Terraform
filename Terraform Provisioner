@@ -34,5 +34,12 @@ resource "aws_instance" "ec2_example" {
     destination = "/home/ubuntu/test-file.txt"
   }
 
-
+ERROR:- getting below issue
+Error: file provisioner error
+│
+│   with aws_instance.terraforminstance,
+│   on main.tf line 12, in resource "aws_instance" "terraforminstance":
+│   12:   provisioner "file" {
+│
+│ timeout - last error: dial tcp 35.91.38.69:22: i/o timeout
      
