@@ -44,6 +44,10 @@ A.) Sensitive :- To encrypt/hide sensitive output details which you don't want t
 syntex:-  sensitive = true
 
 
+Q.) What is depends_on in Terraform ?
+A.)
+
+
 
 
 
