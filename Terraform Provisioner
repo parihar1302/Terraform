@@ -1,0 +1,38 @@
+### Terraform Provisioner:-    It executes certain task or action on local mahichne as well as remote server.
+--------------------------     Action like:- running shell script on local machine or remote machine or copy file from one host to another.
+
+# Type:- a.) Generic Provisioners  (file, local-exec, and remote-exec)
+         b.) Vendor Provisioners (chef, habitat, puppet, salt-masterless)
+     
+a.) Generic Provisioner:- It is vendor indepemdent. Does not require any thrid party software to work with.
+b.) Vendor Provisioner :- It is vendor dependent. It will work only when you use thrid party (chef, puppet & etc).
+
+
+1.) File Provisioner :- transfer a file or directory from one host to another. This requires secure connection like SSH & WinRM.
+#Syntex:- 
+  provisioner "file" {
+    source      = "/home/ubuntukeys/aws/test.txt"            ##test.txt is already present in local system
+    destination = "/home/ubuntu/test.txt"
+  }
+
+## Now copy the content or String into destination
+provisioner "file" {
+    content      = "I want to copy this string to the destination file server.txt"
+    destination = "/home/ubuntu/test.txt"
+}
+
+#Example
+resource "aws_instance" "ec2_example" {
+
+    ami = "ami-0767046d1677be5a0"  
+    instance_type = "t2.micro" 
+    key_name= "aws_key"
+    vpc_security_group_ids = [aws_security_group.main.id]
+
+  provisioner "file" {
+    source      = "/home/ubuntu/keys/aws/test.txt"
+    destination = "/home/ubuntu/test-file.txt"
+  }
+
+
+     
