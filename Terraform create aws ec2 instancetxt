@@ -43,8 +43,8 @@ terraform -install-autocomplete
 
 
 
-Step-4.) Create providers.tf     ## ## This file contains provider info. Here, provide is aws. Otherwise it could be :- aws, azure, gcp
-vi providers.tf             
+Step-4.) Create providers.tf           ## This file contains provider info. Here, provide is aws. Otherwise it could be :- aws, azure, gcp
+vi providers.tf                        ## if you have already mentioned access & secreate keyes while aws configure or export than yu don't require to mentine in providers.tf.
 provider "aws" {
   region = "us-east-2"
 }
