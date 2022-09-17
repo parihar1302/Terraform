@@ -12,6 +12,19 @@ Q.) Cloudformation VS Terraform ?
 A.) Cloudformation is also an Infrastecure as code(IAAS) but drawback is , it's compatible only in AWS. This can not deal with anyother cloud plteform. Where Terraform has an ability to work in any cloudplatform.
     Also, you can not create a keypair & have to mention hard-coded in cloudformation where Terraform can create that.
 
+Q.) Whatv is Terraform init ?
+A.) It initializes the provider & based on that, download the code/depandency & store inside .terraform folder.
+
+Q.) What is Terraform plan ?
+A.) It runs as sanity check or dry run before provisioning the resources or executing the main.tf configuration file. 
+    Once it runs successfully you can get the confirmation from other teams & run further commands like terraform apply. You can debug the code here only, if there is any issue before deploying 
+     
+Q.) What is Terraform apply ?
+A.) It runs the main.tf configuration file & provision the resources, module which is mentioned in it.
+
+Q.) What is Terraform destroy ?
+A.) It terminates the resources which are created by main.tf configuration file.
+
 Q.) what is Terraform Resource ?
 A.) Resource is like a service which you can use for provisioning.
     Ex:- aws_instance, s3, rds, vpc
