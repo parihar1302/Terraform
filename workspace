@@ -1,0 +1,4 @@
+## Terraform Workspace:-    It means you can have multiple state of configuration file.                         https://jhooq.com/terraform-workspaces/
+==========================  In easy words, whean you create development configuration file, the same file can be used for production env as well.
+                            If you don't create any workspace then terraform automatically set workspace as default, where you work on.
+                            
