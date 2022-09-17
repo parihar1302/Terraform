@@ -1,11 +1,11 @@
-#Variable.tf = will store variable which you can call from main.tf.
+#Variable.tf = will store variable which you can call from main.tf. It provides you flexibility to define the value & modify it base on requirement.
 
 #vi variablle.tf         
 #variable is for instance type
 variable "instance_type" {
-   description = "Instance type t2.micro"
-   type        = string
-   default     = "t2.micro"
+   description = "Instance type t2.micro"    ## description
+   type        = string                      ## number, string, boolean, float, list, map
+   default     = "t2.micro"                  ##variable default value which you can modify
 }
 
 # now variable is for s3
@@ -32,7 +32,7 @@ provider "aws" {
 resource "aws_instance" "terraformec2" {
 
     ami = "ami-0fb653ca2d3203ac1"  
-    instance_type = var.instance_type 
+    instance_type = var.instance_type         ##calling variable here
     key_name= "aws_key"
   	tags = {
        Name = "terraformNTS"
