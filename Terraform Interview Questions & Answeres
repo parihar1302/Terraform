@@ -60,6 +60,12 @@ syntex:-  sensitive = true
 Q.) What is depends_on in Terraform ?
 A.)
 
+Q.) What is Terraform workspace ?
+A.) It means where you can have multiple state of your main.tf configuration files. Ex:- if ou are having dev configuration file , the same file can be used for production as well.
+
+
+
+
 
 
 
