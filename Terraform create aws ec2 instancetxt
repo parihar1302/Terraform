@@ -240,6 +240,19 @@ output "my_console_output" {
 =======================================================================================================================
 
 
+ ### Terraform workspace :- You can have multiple state of your configuration file. Suppose if you are using developement main.tf configuration file then same file can be used for production as well.
+                            By default workspace set as "default".
+			    ${terraform.workspace} Interpolation you can use.
+			    
+terraform workspace show         ## Showing current/active workspace
+ 
+terraform workspace new dev       ## creating new workspace
+
+terraform workspace select test     ## switching workspace
+
+terraform workspace list         ## list all workspace
+
+
 
 ### Terraform Variable:- https://jhooq.com/terraform-input-variables/ 
 
