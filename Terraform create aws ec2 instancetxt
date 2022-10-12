@@ -217,6 +217,15 @@ you can copy the content of generated aws_key & replace with downloaded aws_key.
 ======THE END=======================================================================================================================================
 
 
+## .tfstate:- Terraform stores information about your infrastructure in a state file. 
+                              This state file keeps track of resources created by your configuration and maps them to real-world resources.
+
+# .tfstate.backup :- By default, a backup of your state file is written to terraform. tfstate. backup in case the state file is lost or corrupted to simplify recovery. 
+                     The state file is used by Terraform to keep track of resources and metadata information about your infrastructure.
+
+
+
+
 
 ### Terraform Output value:- it is usefule for storring the output values & debugging the terraform code.
 -------------------------------------------------------------------------------------------------------------
