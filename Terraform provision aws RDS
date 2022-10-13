@@ -1,6 +1,13 @@
 #AWS MYSQL RDS Provisioning by  Terraform Code:            https://faraday.ai/blog/how-to-create-an-rds-instance-with-terraform/
 ====================================================
 
+provider "aws" {
+   region     = "us-east-2"
+   access_key = "AKIA3KP2SFFPOZHK5TFEABHAI"
+   secret_key = "H/oQe2a5CpFt6vGokkAyz5HP3BqYDEdsVfRCaSSk130A2"
+   
+}
+
  resource "aws_db_instance" "myrds" {
 #   allocated_storage   = var.dbstorage
    backup_retention_period  = 7   # in days
