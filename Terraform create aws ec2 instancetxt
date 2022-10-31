@@ -225,6 +225,7 @@ you can copy the content of generated aws_key & replace with downloaded aws_key.
 # .tfstate.backup :- By default, a backup of your state file is written to terraform. tfstate. backup in case the state file is lost or corrupted to simplify recovery. 
                      The state file is used by Terraform to keep track of resources and metadata information about your infrastructure.
 
+##Note:- above files can be stored in S3 bucket.
 
 
 
