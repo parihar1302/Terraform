@@ -60,6 +60,9 @@ A.) Terraform output stores output values & also useful while debugging your ter
              }
 ##Note:- you can mention output paramter in "main.tf" or create a seperate file "output.tf" (recommanded).
 
+Q.) How to fix identation error?
+A.) command:-   terraform fmt       ##{this will set the correct indentation in files.}
+
 
 Q.) How to encrypt/hide sensitive output details in Terraform ?
 A.) Sensitive :- To encrypt/hide sensitive output details which you don't want to expose to everyone.
