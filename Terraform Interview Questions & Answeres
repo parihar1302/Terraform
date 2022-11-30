@@ -5,12 +5,15 @@ Q.) Terraform :- It's a infrastructure tool where you can create a template & ba
                  It is compatible with AWS, Azure, GCP & VMware.
  
  
+ Q.) What is Terraform current version ?
+ A.) v1.3.5 (latest version) as per 11/30/2022
+ 
 Q.) Can Ansible create infrastucure?
 A.) Ansible is a configuration management tool but it can also create whole infrasturcure with complex playbook which is difficult to manage.
 
 Q.) Cloudformation VS Terraform ?
 A.) Cloudformation is also an Infrastecure as code(IAAS) but drawback is , it's compatible only in AWS. This can not deal with anyother cloud plteform. Where Terraform has an ability to work in any cloudplatform.
-    Also, you can not create a keypair & have to mention hard-coded in cloudformation where Terraform can create that.
+    Also, you can not create a keypair & have to mention hard-coded in cloudformation where Terraform can create that during run-rime or dynamically.
 
 Q.) Whatv is Terraform init ?
 A.) It initializes the provider & based on that, download the code/depandency & store inside .terraform folder.
@@ -21,6 +24,9 @@ A.) It runs as sanity check or dry run before provisioning the resources or exec
      
 Q.) What is Terraform apply ?
 A.) It runs the main.tf configuration file & provision the resources, module which is mentioned in it.
+
+Q.) What is Terraform refresh ?
+A.) 
 
 Q.) What is Terraform destroy ?
 A.) It terminates the resources which are created by main.tf configuration file.
@@ -51,6 +57,14 @@ A.)i.).tfstate:- Terraform stores information about your infrastructure in a sta
 ii.) .tfstate.backup :- By default, a backup of your state file is written to terraform. tfstate. backup in case the state file is lost or corrupted to simplify recovery. 
                         The state file is used by Terraform to keep track of resources and metadata information about your infrastructure
  
+ 
+ Q.) What if you lose/delete/modify/move Terraform state file ?
+ A.) Terraform will assume it hasn't created any state at all. Terraform will think it never created those resources in the first place and will try to duplicate everything.
+ 
+ 
+ Q.) Where do you store Terraform state file ?
+ A.) S3 bucket  (best practice) or Locally.
+ 
 
 Q.) What is Terraform Output file & why do we use it ? 
 A.) Terraform output stores output values & also useful while debugging your terraform code. 
@@ -59,6 +73,7 @@ A.) Terraform output stores output values & also useful while debugging your ter
                value = aws_instance.my_ec2_instance.public_ip       ##{aws_instance=resource, my_ec2_instance=server name, public_ip=attribute}
              }
 ##Note:- you can mention output paramter in "main.tf" or create a seperate file "output.tf" (recommanded).
+
 
 Q.) How to fix identation error?
 A.) command:-   terraform fmt       ##{this will set the correct indentation in files.}
@@ -70,7 +85,7 @@ syntex:-  sensitive = true
 
 
 Q.) What is depends_on in Terraform ?
-A.)
+A.) Condition where one resource execute after other mentioned resource.
 
 Q.) What is Terraform workspace ?
 A.) It means where you can have multiple state of your main.tf configuration files. Ex:- if ou are having dev configuration file , the same file can be used for production as well.
