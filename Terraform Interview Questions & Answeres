@@ -25,15 +25,39 @@ A.) It runs as sanity check or dry run before provisioning the resources or exec
 Q.) What is Terraform apply ?
 A.) It runs the main.tf configuration file & provision the resources, module which is mentioned in it.
 
-Q.) What is Terraform refresh ?
-A.) 
+Q.) What is Terraform refresh or Terraform apply -refresh-only and Terraform plan -refresh-only?    {#https://learning-ocean.com/tutorials/terraform/terraform-refresh
+A.) You can bring current cloud provisioned sate in Terraform state file. 
+EX:- suppose you run Terraform apply which will provision theresource on cloud as well as create Terraform state file
+     but if other developer manually update the provisioned resouces than next time when we will run the Terraform apply, it ill throw an error
+     to avoide above error we run Terraform refresh so state file gets the updated resources which is already provisioed.
+     after Terrafrom refresh perform Terraform plan & consult with team than Terraform apply this will provision previous mentioned resourc not the modified one.
+[Note:-If you remove any resourc from main.tf & doesn't update tfstate file than based on main.tf resourcs will get provisioned after executing Terraform apply.
+
 
 Q.) What is Terraform destroy ?
 A.) It terminates the resources which are created by main.tf configuration file.
 
+Q.) What is Terraform Local ?
+A.)
+
+Q.) What is Terraform null resource ?
+A.) 
+
 Q.) what is Terraform Resource ?
 A.) Resource is like a service which you can use for provisioning.
     Ex:- aws_instance, s3, rds, vpc
+
+Q.) Whatis Terraform Module
+A.) Collection of multiple configuration files in a directory to avoide the complexity of main.tf.
+
+Q.) What is Terraform Provider & Custome Provider ?
+A.) 
+
+Q.) What is Terragrunt ?
+A.) 
+
+Q.) What is Terraform Import ?
+A.) 
 
 Q.) Can i run specific module on specific resource or ec2/host/server, instead off running all module in all server?
 A.) yes, you can run perticular module on specific resource or host/server/ec2.    ---> https://jhooq.com/terraform-run-specific-resource/
@@ -63,8 +87,15 @@ ii.) .tfstate.backup :- By default, a backup of your state file is written to te
  
  
  Q.) Where do you store Terraform state file ?
- A.) S3 bucket  (best practice) or Locally.
+ A.) Remote backends allow you to store the state file in a remote, shared store. 
+     A number of remote backends are supported, including Amazon S3, Azure Storage, Google Cloud Storage, and HashiCorp's Terraform Cloud and Terraform Enterprise.
+     S3 bucket  (best practice) or Locally.
  
+Q.) What does Terraform show do?
+A.) You can read/display the state file (.tfstate) in terminal itself.
+
+Q.) Can you edit .tfstate file ?
+A.) You can edit the terraform state manually but it is highly discouraged.
 
 Q.) What is Terraform Output file & why do we use it ? 
 A.) Terraform output stores output values & also useful while debugging your terraform code. 
@@ -90,7 +121,9 @@ A.) Condition where one resource execute after other mentioned resource.
 Q.) What is Terraform workspace ?
 A.) It means where you can have multiple state of your main.tf configuration files. Ex:- if ou are having dev configuration file , the same file can be used for production as well.
 
-
+Q.) What is Terraform Provisioners ?
+A.) Basically, it is used to execute the script in local or remote machine as well as copy the file in local or remote server.
+    It is similar to “EC2 instance user data” scripts that only run once on the creation and if it fails terraform marks it tainted
 
 
 
