@@ -21,6 +21,8 @@ A.) It initializes the provider & based on that, download the code/depandency & 
 Q.) What is Terraform plan ?
 A.) It runs as sanity check or dry run before provisioning the resources or executing the main.tf configuration file. 
     Once it runs successfully you can get the confirmation from other teams & run further commands like terraform apply. You can debug the code here only, if there is any issue before deploying 
+    Validate the configuration file implicitly during the terraform plan.
+    
      
 Q.) What is Terraform apply ?
 A.) It runs the main.tf configuration file & provision the resources, module which is mentioned in it.
@@ -36,6 +38,12 @@ EX:- suppose you run Terraform apply which will provision theresource on cloud a
 
 Q.) What is Terraform destroy ?
 A.) It terminates the resources which are created by main.tf configuration file.
+
+Q.) Difference b/w Terrafrom Validate & Terraform Plan ?            {# https://spacelift.io/blog/terraform-validate}
+A.) Both the command used for validation perpose where 
+    Terraform Plan is used to validate configuration file  shows what exactly is modified, replaced, created & destroy.Also, Plan command hit various API to remote state file & cloud platform api & gets the latest info on state & real world cloud.
+    Terraform Validate command is used to validate configuration file locally or host machine. It validates the syntex from configuration file. Doesn't depend on state file.  It is recommended to use this command to validate the consistencies between reusable modules in a given Terraform configuration directory.
+   
 
 Q.) What is Terraform Local ?
 A.)
