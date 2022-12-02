@@ -123,7 +123,12 @@ A.) It means where you can have multiple state of your main.tf configuration fil
 
 Q.) What is Terraform Provisioners ?
 A.) Basically, it is used to execute the script in local or remote machine as well as copy the file in local or remote server.
-    It is similar to “EC2 instance user data” scripts that only run once on the creation and if it fails terraform marks it tainted
+    It is similar to “EC2 instance user data” scripts that only run once on the creation and if it fails terraform marks it tainted.
+    
+Q._ What are the two types of backends Terraform?
+A.) Based on this, Terraform backends are classified into two types.
+    1.) Enhanced Backend – Additional operations like plan, apply, etc. on remote.
+    2.) Standard backend – Simple State file storage and lock facility.
 
 
 
