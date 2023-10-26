@@ -10,8 +10,8 @@
 ## When you use access & secreate key for login :-
 provider "aws" {
   region     = "us-east-1"
-  access_key = "AKIA4NMPAJJ7D4HF67PK"
-  secret_key = "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"
+  access_key = "AKI46HGbS6XXXXXXXXXXX"
+  secret_key = "yTKmE4YIO9XXXXXXXXXXXXXXXXXXX"
 }
 
 ## When you use assume role for login :-
