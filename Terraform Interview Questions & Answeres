@@ -6,7 +6,7 @@ Q.) Terraform :- It's a infrastructure tool where you can create a template & ba
  
  
  Q.) What is Terraform current version ?
- A.) v1.3.5 (latest version) as per 11/30/2022
+ A.) v1.7.3 (latest version) as per 11/02/2024
  
 Q.) Can Ansible create infrastucure?
 A.) Ansible is a configuration management tool but it can also create whole infrasturcure with complex playbook which is difficult to manage.
