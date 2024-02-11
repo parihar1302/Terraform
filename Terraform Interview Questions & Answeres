@@ -28,9 +28,9 @@ Q.) What is Terraform apply ?
 A.) It runs the main.tf configuration file & provision the resources, module which is mentioned in it.
 
 Q.) What is Terraform refresh or Terraform apply -refresh-only and Terraform plan -refresh-only?    {#https://learning-ocean.com/tutorials/terraform/terraform-refresh
-A.) You can bring current cloud provisioned sate in Terraform state file. 
-EX:- suppose you run Terraform apply which will provision theresource on cloud as well as create Terraform state file
-     but if other developer manually update the provisioned resouces than next time when we will run the Terraform apply, it ill throw an error
+A.) You can bring current cloud provisioned tsate in Terraform state file. 
+EX:- suppose you run Terraform apply which will provision the resource on cloud as well as in Terraform state file
+     but if other developer manually update the provisioned resouces than next time when we will run the Terraform apply, it will throw an error
      to avoide above error we run Terraform refresh so state file gets the updated resources which is already provisioed.
      after Terrafrom refresh perform Terraform plan & consult with team than Terraform apply this will provision previous mentioned resourc not the modified one.
 [Note:-If you remove any resourc from main.tf & doesn't update tfstate file than based on main.tf resourcs will get provisioned after executing Terraform apply.
